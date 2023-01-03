@@ -583,11 +583,11 @@ public class GUI {
                 ")\n" +
                 "\n" +
                 "(defrule query5\n" +
-                "\t(object (is-a University) (hasFaculty ?faculty)(universityName ?un))\n" +
+                "\t(object (is-a University) (hasFaculty $?faculty)(universityName ?un))\n" +
                 "\t=>\n" +
                 "\t(if (eq ?un ?*university*)\n" +
                 "\t\tthen\n" +
-                "\t\t(printout t \"University \" ?un \" has faculty \" ?faculty crlf)\n" +
+                "\t\t(printout t ?un \" has faculties \" $?faculty crlf)\n" +
                 "\t)\n" +
                 ")");
         clips.reset();
